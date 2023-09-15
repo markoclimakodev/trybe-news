@@ -20,7 +20,7 @@ import { NewsItem } from '../../hooks/types'
 
 export const FeaturedNews = () => {
   const { news } = useNewsFetch(newsUrl)
-  const latestNews: NewsItem = news[0]
+  const latestNews: NewsItem = news && news[0]
 
   return (
     latestNews && (
@@ -35,7 +35,11 @@ export const FeaturedNews = () => {
           <Intro>{latestNews.introducao}</Intro>
           <Footer>
             <span>{getPublicationTime(latestNews.data_publicacao)}</span>
-            <Button role="read news" title="Leia a notícia aqui" />
+            <Button
+              role="read news"
+              title="Leia a notícia aqui"
+              href={latestNews.link}
+            />
           </Footer>
         </NewsInfoContainer>
       </Container>
