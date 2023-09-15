@@ -11,7 +11,7 @@ export const Container = styled.nav`
 export const CategoryContainer = styled.ul`
   background-color: var(--ice);
   display: flex;
-  gap: 1.2rem;
+  gap: 0.8rem;
   justify-content: center;
   list-style: none;
   padding: 0.8rem;
@@ -23,24 +23,32 @@ export const CategoryContainer = styled.ul`
 `
 
 export const Category = styled.li`
-  a {
+  border-bottom: 1px solid var(--ice);
+  display: flex;
+  align-items: center;
+  button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
     color: var(--text-color);
+    display: flex;
     font-size: 1.2rem;
     font-weight: 600;
-    padding-bottom: 0.8rem;
+    justify-content: center;
+    padding: 0.8rem;
+    text-align: center;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   @media screen and (min-width: 768px) {
-    a {
+    button {
       font-size: 1.6rem;
     }
   }
 
   &:hover {
-    a {
-      border-bottom: 1px solid var(--accent-color);
-      color: var(--accent-color);
-    }
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
   }
 `
