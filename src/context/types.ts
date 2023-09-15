@@ -15,13 +15,7 @@ export type NewsItem = {
   link: string
 }
 
-export interface NewsResponse {
-  count: number
-  page: number
-  totalPages: number
-  nextPage: number
-  previousPage: number
-  showingFrom: number
-  showingTo: number
-  items: NewsItem[]
+export type NewsContextType = {
+  news: NewsItem[]
+  handleNews: (newsArray: NewsItem[]) => void
 }

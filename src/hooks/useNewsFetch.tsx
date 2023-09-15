@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NewsItem, NewsResponse } from './types'
 
-export const useNewsFetch = (url: string) => {
+export const useNewsFetch = (url: string): NewsItem[] => {
   const [news, setNews] = useState<NewsItem[]>([])
 
   useEffect(() => {
@@ -22,5 +22,5 @@ export const useNewsFetch = (url: string) => {
     fetchNews()
   }, [url])
 
-  return { news }
+  return news
 }
