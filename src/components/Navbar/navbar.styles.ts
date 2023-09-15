@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  width: 100%;
   margin-top: 2.4rem;
-  padding: 0 0.8rem;
-  max-width: 134.6rem;
   margin: 5.2rem auto;
+  max-width: 134.6rem;
+  padding: 0 0.8rem;
+  width: 100%;
 `
 
 export const CategoryContainer = styled.ul`
@@ -23,9 +23,10 @@ export const CategoryContainer = styled.ul`
 `
 
 export const Category = styled.li`
+  align-items: center;
   border-bottom: 1px solid var(--ice);
   display: flex;
-  align-items: center;
+
   a {
     align-items: center;
     background-color: transparent;
@@ -48,7 +49,7 @@ export const Category = styled.li`
   }
 
   &:hover {
-    color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
+    color: var(--accent-color);
   }
 `

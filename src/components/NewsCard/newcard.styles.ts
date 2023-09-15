@@ -60,4 +60,9 @@ export const Divider = styled.section`
   display: flex;
   justify-content: flex-end;
   padding-top: 0.8rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
 `

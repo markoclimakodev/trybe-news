@@ -1,4 +1,5 @@
-import { MdFavoriteBorder } from 'react-icons/md'
+import { MdFavorite, MdFavoriteBorder } from 'react-icons/md'
+
 import { useNewsFetch } from '../../hooks/useNewsFetch'
 import {
   Container,
@@ -15,12 +16,15 @@ import Button from '../Button'
 import { getNewsImage } from '../../helpers/getNewsImage'
 import { getPublicationTime } from '../../helpers/getPublicationTime'
 
+import { useContext } from 'react'
 import { latestNewsUrl } from '../../api'
+import { NewsContext } from '../../context/NewsContext'
 import { NewsItem } from '../../hooks/types'
 
 export const FeaturedNews = () => {
   const news = useNewsFetch(latestNewsUrl)
   const latestNews: NewsItem = news && news[0]
+  const { favorites, handleFavoriteNews } = useContext(NewsContext)
 
   return (
     latestNews && (
@@ -29,7 +33,16 @@ export const FeaturedNews = () => {
         <NewsInfoContainer>
           <Header>
             <span>Noticia mais recente</span>
-            <MdFavoriteBorder size={16} />
+            <button
+              type="button"
+              onClick={() => handleFavoriteNews(latestNews)}
+            >
+              {favorites.some((favorite) => favorite.id === latestNews.id) ? (
+                <MdFavorite size={16} />
+              ) : (
+                <MdFavoriteBorder size={16} />
+              )}
+            </button>
           </Header>
           <Heading>{latestNews.titulo}</Heading>
           <Intro>{latestNews.introducao}</Intro>
