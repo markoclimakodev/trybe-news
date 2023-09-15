@@ -5,7 +5,9 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Logo />
-      <Heading>TRYBE NEWS</Heading>
+      <Heading>
+        TRYBE NEWS <small>IBGE</small>
+      </Heading>
     </HeaderContainer>
   )
 }

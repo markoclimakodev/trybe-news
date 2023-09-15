@@ -4,13 +4,17 @@ export const ReadNewsButton = styled.button`
   background-color: var(--button-color);
   border: none;
   border-radius: 0.2rem;
-  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.04rem;
   line-height: 1.2rem;
   padding: 0.8rem;
   transition: all 350ms ease-in-out;
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
 
   &:hover {
     background-color: var(--button-hover-color);
