@@ -7,15 +7,12 @@ export type NewsItem = {
   produto_id: number
   imagens: {
     image_intro: string
-    image_intro_alt: string
-    image_intro_caption: string
-    float_fulltext: string
   }
   destaque: boolean
   link: string
 }
 
 export type NewsContextType = {
-  news: NewsItem[]
-  handleNews: (newsArray: NewsItem[]) => void
+  favorites: NewsItem[]
+  handleFavoriteNews: (newsFavorite: NewsItem) => void
 }

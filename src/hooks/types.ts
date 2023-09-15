@@ -7,9 +7,6 @@ export type NewsItem = {
   produto_id: number
   imagens: {
     image_intro: string
-    image_intro_alt: string
-    image_intro_caption: string
-    float_fulltext: string
   }
   destaque: boolean
   link: string
