@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
+  background-color: var(--ice);
   margin: auto;
   max-width: 134.6rem;
   position: relative;
@@ -10,7 +11,7 @@ export const Container = styled.section`
     align-items: center;
     display: flex;
     gap: 1.6rem;
-    padding: 5.2rem 3.2rem 0;
+    margin: 5.2rem auto;
     position: static;
   }
 `
