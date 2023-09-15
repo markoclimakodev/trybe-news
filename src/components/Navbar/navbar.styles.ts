@@ -26,7 +26,7 @@ export const Category = styled.li`
   border-bottom: 1px solid var(--ice);
   display: flex;
   align-items: center;
-  button {
+  a {
     align-items: center;
     background-color: transparent;
     border: none;
@@ -42,7 +42,7 @@ export const Category = styled.li`
   }
 
   @media screen and (min-width: 768px) {
-    button {
+    a {
       font-size: 1.6rem;
     }
   }
