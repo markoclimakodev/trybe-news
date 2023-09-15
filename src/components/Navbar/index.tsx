@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Category, CategoryContainer, Container } from './navbar.styles'
 
 export const Navbar = () => {
@@ -5,16 +6,16 @@ export const Navbar = () => {
     <Container>
       <CategoryContainer>
         <Category>
-          <a href="/">Mais Recentes</a>
+          <Link to="/">Mais Recentes</Link>
         </Category>
         <Category>
-          <a href="/releases">Releases</a>
+          <Link to="/releases">Releases</Link>
         </Category>
         <Category>
-          <a href="/news">Notícias</a>
+          <Link to="/news">Notícias</Link>
         </Category>
         <Category>
-          <a href="/favorites">Favoritas</a>
+          <Link to="/favorites">Favoritas</Link>
         </Category>
       </CategoryContainer>
     </Container>

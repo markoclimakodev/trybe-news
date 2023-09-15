@@ -11,14 +11,16 @@ function Button({ role, title, href = '', ...props }: ButtonProps) {
   return (
     <>
       {role === 'read news' && (
-        <ReadNewsButton {...props}>
+        <ReadNewsButton {...props} type="button">
           <a href={href} target="_blank" rel="noreferrer">
             {title}
           </a>
         </ReadNewsButton>
       )}
       {role === 'read more' && (
-        <MoreNewsButton {...props}>{title}</MoreNewsButton>
+        <MoreNewsButton {...props} type="button">
+          {title}
+        </MoreNewsButton>
       )}
     </>
   )

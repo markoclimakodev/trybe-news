@@ -52,6 +52,11 @@ export const Header = styled.header`
     font-size: 1.4rem;
     font-weight: 600;
   }
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
 `
 
 export const Heading = styled.h2`
