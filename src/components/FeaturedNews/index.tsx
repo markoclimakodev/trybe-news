@@ -15,11 +15,11 @@ import Button from '../Button'
 import { getNewsImage } from '../../helpers/getNewsImage'
 import { getPublicationTime } from '../../helpers/getPublicationTime'
 
-import { apiEndPoint } from '../../api'
+import { latestNewsUrl } from '../../api'
 import { NewsItem } from '../../hooks/types'
 
 export const FeaturedNews = () => {
-  const news = useNewsFetch(apiEndPoint.latest)
+  const news = useNewsFetch(latestNewsUrl)
   const latestNews: NewsItem = news && news[0]
 
   return (
