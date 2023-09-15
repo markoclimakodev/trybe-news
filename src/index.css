@@ -33,3 +33,22 @@ body {
   width: 100%;
   background-color: var(--smoke);
 }
+
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #05d464 #ffffff;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #05d464;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
