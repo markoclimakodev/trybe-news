@@ -1,12 +1,12 @@
-import { useContext } from 'react'
-import { NewsContext } from '../../context/NewsContext'
+import { newsUrl } from '../../api'
+import { NewsCard } from '../../components/NewsCard'
 import { NewsItem } from '../../hooks/types'
-import { NewsCard } from './NewsCard'
-import { Container } from './newcard.styles'
+import { useNewsFetch } from '../../hooks/useNewsFetch'
+import { Container } from './news.styles'
 
 export const News = () => {
-  const { news } = useContext(NewsContext)
-
+  const news = useNewsFetch(newsUrl)
+  console.log(news)
   return (
     <Container>
       {news &&
