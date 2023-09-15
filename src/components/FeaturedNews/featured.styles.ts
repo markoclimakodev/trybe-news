@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+export const Container = styled.article`
   background-color: var(--ice);
   margin: auto;
   max-width: 134.6rem;
