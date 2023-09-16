@@ -4,8 +4,8 @@ import renderWithRouter from './helpers/renderWithRouter'
 
 describe('Test the Header Component', () => {
   it('Test the logo and heading of the Header', () => {
-    renderWithRouter(<App />)
+    renderWithRouter(<App />, { route: '/' })
     screen.getByTestId('app-logo')
-    screen.getByRole('heading', { name: 'TRYBE NEWS' })
+    screen.getByRole('heading', { name: /trybe news ibge/i })
   })
 })
