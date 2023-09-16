@@ -4,7 +4,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3.2rem;
+  padding: 0 0 3.2rem;
 `
 
 export const NewsContainer = styled.section`
