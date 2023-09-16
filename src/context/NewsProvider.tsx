@@ -37,8 +37,6 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
     } else {
       setFavorites([...favorites, newFavorite])
     }
-
-    localStorage.setItem('favoritesNews', JSON.stringify(favorites))
   }
 
   const providerValues: NewsContextType = {

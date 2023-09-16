@@ -8,12 +8,14 @@ type NewsCardProps = {
   handleFavorite: (news: NewsItem) => void
   newsItem: NewsItem
   isFavorite: boolean
+  testId: number
 }
 
 export const NewsCard = ({
   newsItem,
   handleFavorite,
   isFavorite,
+  testId,
 }: NewsCardProps) => {
   return (
     <Card>
@@ -28,7 +30,12 @@ export const NewsCard = ({
         />
       </Footer>
       <Divider>
-        <button type="button" onClick={() => handleFavorite(newsItem)}>
+        <button
+          type="button"
+          onClick={() => handleFavorite(newsItem)}
+          data-testid={testId}
+          className={isFavorite ? 'favorited' : 'unfavorited'}
+        >
           {isFavorite ? (
             <MdFavorite size={16} color="#c31815" />
           ) : (
