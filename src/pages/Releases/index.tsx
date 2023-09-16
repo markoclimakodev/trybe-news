@@ -27,6 +27,7 @@ export const Releases = () => {
             .map((newsItem: NewsItem) => (
               <NewsCard
                 key={newsItem.id}
+                testId={newsItem.id}
                 newsItem={newsItem}
                 handleFavorite={handleFavoriteNews}
                 isFavorite={favorites.some(

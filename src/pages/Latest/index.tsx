@@ -9,7 +9,7 @@ import { Container } from './latest.styles'
 export const Latest = () => {
   const news = useNewsFetch(latestNewsUrl)
   const { favorites, handleFavoriteNews } = useContext(NewsContext)
-
+  console.log(news)
   return (
     <>
       <Container>
@@ -17,6 +17,7 @@ export const Latest = () => {
           news.map((newsItem: NewsItem) => (
             <NewsCard
               key={newsItem.id}
+              testId={newsItem.id}
               newsItem={newsItem}
               handleFavorite={handleFavoriteNews}
               isFavorite={favorites.some(
