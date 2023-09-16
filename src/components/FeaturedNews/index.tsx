@@ -38,7 +38,7 @@ export const FeaturedNews = () => {
               onClick={() => handleFavoriteNews(latestNews)}
             >
               {favorites.some((favorite) => favorite.id === latestNews.id) ? (
-                <MdFavorite size={16} />
+                <MdFavorite size={16} color="#c31815" />
               ) : (
                 <MdFavoriteBorder size={16} />
               )}

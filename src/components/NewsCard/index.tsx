@@ -30,7 +30,7 @@ export const NewsCard = ({
       <Divider>
         <button type="button" onClick={() => handleFavorite(newsItem)}>
           {isFavorite ? (
-            <MdFavorite size={16} />
+            <MdFavorite size={16} color="#c31815" />
           ) : (
             <MdFavoriteBorder size={16} />
           )}
