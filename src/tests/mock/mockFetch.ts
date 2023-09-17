@@ -14,10 +14,3 @@ export const mockFetch = (url: string) =>
       return Promise.reject(new Error('Error: Failed to fetch'))
     },
   })
-
-export const mockFetchFailed = () =>
-  Promise.resolve({
-    status: 400,
-    ok: false,
-    json: () => Promise.reject(new Error('Error: Failed to fetch')),
-  })

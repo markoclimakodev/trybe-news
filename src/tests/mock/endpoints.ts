@@ -6,6 +6,3 @@ export const RELEASES_URL =
 
 export const NEWS_URL =
   'https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=noticia&qtd=100&introsize=60'
-
-export const ERROR_URL =
-  'https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=error&qtd=100&introsize=60'
