@@ -1,3 +1,4 @@
+[Read in English](/README.en.md)
 
 ![trybe_news_logo](https://github.com/markoclimakodev/trybe-news/assets/95707510/3abab91b-8f76-42a8-99ae-b1cc2f56ce59)
 
