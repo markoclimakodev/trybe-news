@@ -3,9 +3,8 @@ import userEvent from '@testing-library/user-event'
 import { vi } from 'vitest'
 import App from '../App'
 import renderWithRouter from './helpers/renderWithRouter'
-import { ERROR_URL } from './mock/endpoints'
 import { latestNews } from './mock/latestNews'
-import { mockFetch, mockFetchFailed } from './mock/mockFetch'
+import { mockFetch } from './mock/mockFetch'
 
 describe('Test the Latest page', () => {
   afterEach(() => {
