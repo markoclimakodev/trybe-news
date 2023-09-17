@@ -34,7 +34,9 @@ export const NewsProvider = ({ children }: NewsProviderProps) => {
         (favorite) => favorite.id !== newFavorite.id,
       )
       setFavorites(updatedFavorites)
-    } else {
+    }
+
+    if (!isAlreadyFavorited) {
       setFavorites([...favorites, newFavorite])
     }
   }

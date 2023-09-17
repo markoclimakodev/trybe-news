@@ -11,9 +11,10 @@ export const useNewsFetch = (url: string): NewsItem[] => {
         if (!response.ok) {
           throw new Error('Failed to fetch')
         }
-
-        const data: NewsResponse = await response.json()
-        setNews(data.items)
+        if (response.ok) {
+          const data: NewsResponse = await response.json()
+          setNews(data.items)
+        }
       } catch (error) {
         console.error('Error:', error)
       }
