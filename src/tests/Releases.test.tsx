@@ -1,30 +1,39 @@
 import { screen } from '@testing-library/dom'
+import userEvent from '@testing-library/user-event'
 import { vi } from 'vitest'
-import { Releases } from '../pages/Releases'
+import App from '../App'
 import renderWithRouter from './helpers/renderWithRouter'
+import { mockFetch } from './mock/mockFetch'
 import { releases } from './mock/releases'
 
 describe('Test the Releases page', () => {
-  it('Verify that the "Releases" page renders news articles correctly', async () => {
-    const { user } = renderWithRouter(<Releases />, { route: '/releases' })
-    global.fetch = vi.fn().mockResolvedValue({
-      json: async () => releases,
-    })
+  afterEach(() => {
+    vi.clearAllMocks()
+  })
+
+  beforeEach(async () => {
+    global.fetch = vi.fn().mockImplementation(mockFetch)
+    renderWithRouter(<App />, { route: '/releases' })
+  })
+
+  it('Tests if the articles is rendered', async () => {
     const articles = await screen.findAllByRole('article')
-    const favoriteBtn = await screen.findByTestId(releases[0].id)
+    expect(articles).toHaveLength(21)
+  })
+
+  it('Tests if the user can favorite and unfavorite an article', async () => {
+    const favoriteBtn = await screen.findByTestId(releases.items[0].id)
     const loadMoreNewsBtn = screen.getByRole('button', {
       name: /mais notícias/i,
     })
 
-    expect(articles).toHaveLength(20)
-
-    await user.click(favoriteBtn)
+    await userEvent.click(favoriteBtn)
     expect(favoriteBtn).toHaveClass('favorited')
 
-    await user.click(favoriteBtn)
+    await userEvent.click(favoriteBtn)
     expect(favoriteBtn).toHaveClass('unfavorited')
 
-    await user.click(loadMoreNewsBtn)
-    expect(await screen.findAllByRole('article')).toHaveLength(40)
+    await userEvent.click(loadMoreNewsBtn)
+    expect(await screen.findAllByRole('article')).toHaveLength(41)
   })
 })
