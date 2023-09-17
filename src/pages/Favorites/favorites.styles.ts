@@ -10,6 +10,11 @@ export const Container = styled.section`
   padding-bottom: 2.4rem;
   margin: auto;
 
+  h2 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+  }
+
   @media screen and (min-width: 768px) {
     width: 80%;
     flex-direction: row;
