@@ -66,7 +66,7 @@ npm run test Navbar
 ```
 
 ### Testes de Cobertura
-Se você deseja verificar a cobertura dos testes, execute o seguinte comando:
+Para rodar a cobertura dos testes, execute o seguinte comando:
 
 ```
 npm run coverage
