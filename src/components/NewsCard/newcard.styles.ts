@@ -30,7 +30,7 @@ export const Card = styled.article`
 
 export const Heading = styled.h2`
   color: var(--text-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   height: 5.6rem;
   overflow-y: auto;
   @media screen and (min-width: 768px) {
