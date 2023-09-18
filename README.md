@@ -28,6 +28,14 @@ A aplicação foi desenvolvida utilizando as seguintes tecnologias e bibliotecas
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
+## Layout no Figma
+Acesse o layout completo no Figma clicando no link abaixo:
+
+[Layout no Figma](https://www.figma.com/file/QcFPl535QoNnGnuhz5LRf6/Trybe-News-IBGE?type=design&node-id=0%3A1&mode=design&t=6oXmwm9PP6LUjM9M-1)
+
+
+![figma](https://github.com/markoclimakodev/trybe-news/assets/95707510/bf9d0474-c529-486b-9501-74f3fe40fa3a)
+
 
 ## Como Usar
 
