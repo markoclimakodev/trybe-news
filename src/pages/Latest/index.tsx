@@ -9,7 +9,6 @@ import { Container } from './latest.styles'
 export const Latest = () => {
   const news = useNewsFetch(latestNewsUrl)
   const { favorites, handleFavoriteNews } = useContext(NewsContext)
-  console.log(news)
   return (
     <>
       <Container>
