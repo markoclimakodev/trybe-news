@@ -7,12 +7,10 @@ import { NewsItem } from '../../hooks/types'
 import { useNewsFetch } from '../../hooks/useNewsFetch'
 import { Container, NewsContainer } from './news.styles'
 
-const initialNewsCount = 20
-
 export const News = () => {
   const news = useNewsFetch(newsUrl)
   const { favorites, handleFavoriteNews } = useContext(NewsContext)
-  const [displayedNews, setDisplayedNews] = useState(initialNewsCount)
+  const [displayedNews, setDisplayedNews] = useState(30)
 
   const handleLoadMoreNews = () => {
     const newsPerLoad = 20
@@ -23,7 +21,7 @@ export const News = () => {
       <NewsContainer>
         {news &&
           news
-            .slice(0, displayedNews)
+            .slice(10, displayedNews)
             .map((newsItem: NewsItem) => (
               <NewsCard
                 key={newsItem.id}

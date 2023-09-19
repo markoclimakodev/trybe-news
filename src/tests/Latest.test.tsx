@@ -16,6 +16,6 @@ describe('Test the Latest page', () => {
 
   it('Tests if the articles is rendered', async () => {
     const articles = await screen.findAllByRole('article')
-    expect(articles).toHaveLength(6)
+    expect(articles).toHaveLength(11)
   })
 })

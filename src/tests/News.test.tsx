@@ -18,11 +18,11 @@ describe('Test the News page', () => {
 
   it('Tests if the latest articles is rendered', async () => {
     const articles = await screen.findAllByRole('article')
-    expect(articles).toHaveLength(20)
+    expect(articles).toHaveLength(21)
   })
 
   it('Tests if the user can favorite and unfavorite an article', async () => {
-    const favoriteBtn = await screen.findByTestId(news.items[0].id)
+    const favoriteBtn = await screen.findByTestId(news.items[10].id)
     const loadMoreNewsBtn = screen.getByRole('button', {
       name: /mais notícias/i,
     })
@@ -34,6 +34,6 @@ describe('Test the News page', () => {
     expect(favoriteBtn).toHaveClass('unfavorited')
 
     await userEvent.click(loadMoreNewsBtn)
-    expect(await screen.findAllByRole('article')).toHaveLength(40)
+    expect(await screen.findAllByRole('article')).toHaveLength(31)
   })
 })

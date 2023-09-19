@@ -17,12 +17,12 @@ import { getNewsImage } from '../../helpers/getNewsImage'
 import { getPublicationTime } from '../../helpers/getPublicationTime'
 
 import { useContext } from 'react'
-import { latestNewsUrl } from '../../api'
+import { newsUrl } from '../../api'
 import { NewsContext } from '../../context/NewsContext'
 import { NewsItem } from '../../hooks/types'
 
 export const FeaturedNews = () => {
-  const news = useNewsFetch(latestNewsUrl)
+  const news = useNewsFetch(newsUrl)
   const latestNews: NewsItem = news && news[0]
   const { favorites, handleFavoriteNews } = useContext(NewsContext)
 

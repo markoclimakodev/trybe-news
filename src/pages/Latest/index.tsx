@@ -14,7 +14,7 @@ export const Latest = () => {
       <Container>
         {news &&
           news
-            .slice(0, 6)
+            .slice(0, 10)
             .map((newsItem: NewsItem) => (
               <NewsCard
                 key={newsItem.id}
