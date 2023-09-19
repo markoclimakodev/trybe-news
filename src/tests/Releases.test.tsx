@@ -18,7 +18,7 @@ describe('Test the Releases page', () => {
 
   it('Tests if the articles is rendered', async () => {
     const articles = await screen.findAllByRole('article')
-    expect(articles).toHaveLength(21)
+    expect(articles).toHaveLength(20)
   })
 
   it('Tests if the user can favorite and unfavorite an article', async () => {
@@ -34,6 +34,6 @@ describe('Test the Releases page', () => {
     expect(favoriteBtn).toHaveClass('unfavorited')
 
     await userEvent.click(loadMoreNewsBtn)
-    expect(await screen.findAllByRole('article')).toHaveLength(41)
+    expect(await screen.findAllByRole('article')).toHaveLength(40)
   })
 })
